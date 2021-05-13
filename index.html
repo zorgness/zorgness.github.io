@@ -13,11 +13,15 @@
             color: red;
             font-size: 20;
         }
+        h2 {
+            font-size: 45px;
+            color: blue;
+        }
     </style>
 </head>
 <body>
 
-    
+    <h2 align='center' id="count"></h2>
     <div align='center' id="lol">
 
     </div> 
@@ -28,8 +32,25 @@
 </body>
 
 <script>
+    let count = document.getElementById('count');
+    setTimeout(() =>{
+    count.innerHTML="3";
+    console.log("3");
+    setTimeout(() =>{
+        count.innerHTML="2";
+        console.log("2");  
+        setTimeout(() =>{
+            count.innerHTML="1";
+            console.log("1");
+            setTimeout(() =>{
+                count.innerHTML="";
+                document.body.onload = addElement();
+            },1000);
+        },1000);
+    },1000);
+},1000);
         
-    document.body.onload = addElement;
+    
 
     function addElement() {
         let num = 1000;
