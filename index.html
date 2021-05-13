@@ -5,20 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test github</title>
+   
+    <style>
+        h1 {
+            margin:10px;
+            text-align:center;
+            color: red;
+            font-size: 20;
+        }
+    </style>
 </head>
 <body>
 
     
+    <div align='center' id="lol">
 
-    <p style="padding:15px" id="root"></p>
+    </div> 
+
+    
+    
     
 </body>
-    
-    <script>
-        let test = document.getElementById('root');
-        let num = 100;
+
+<script>
+        
+    document.body.onload = addElement;
+
+    function addElement() {
+        let num = 1000;
+        let lol = document.getElementById('lol');
         for(let i = 0; i < num; i++) {
-            test.innerHTML= "SALE CHAUVE!!!"
-        }
-    </script>
+        let test = document.createElement("h1", [id="root"])
+        let chauve = document.getElementById('root');
+        const newContent = document.createTextNode("sale chauve!");
+        test.appendChild(newContent);
+        const currentDiv = document.getElementById("lol");
+        document.body.insertBefore(test, currentDiv);
+        currentDiv.innerHTML= "proute";
+           
+    }}
+</script>
+    
+  
 </html>
